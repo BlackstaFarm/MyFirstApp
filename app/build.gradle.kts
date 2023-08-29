@@ -36,6 +36,16 @@ android {
     buildFeatures {
         viewBinding = true
     }
+    flavorDimensions += listOf("app_market")
+    productFlavors {
+        create("google") {
+            dimension = "app_market"
+        }
+        create("amazon") {
+            dimension = "app_market"
+            applicationIdSuffix = ".amazon"
+        }
+    }
 }
 
 dependencies {
